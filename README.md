@@ -30,12 +30,12 @@
 - index.js
 ```
 
-`npm init`创建我们的`package.json`
+`git clone https://github.com/Qinchengqiang/auth-userApi-mongo-node.git`pull 到本地
 
 接着在项目根文件夹下安装我们所需的依赖
 
 ```
-npm install express body-parser morgan mongoose jsonwebtoken bcrypt passport passport-http-bearer --save 
+npm install 
 
 ```
 * express: 我们的主要开发框架
@@ -46,7 +46,16 @@ npm install express body-parser morgan mongoose jsonwebtoken bcrypt passport pas
 * bcrypt: 对用户密码进行hash加密
 
 
-8080/api/signup](),我们来注册一个新用户，注意要设置`body`的`Content-Type`为`x-www-form-urlencoded` 以便我们的`body-parser`能够正确解析,好的我们成功模拟创建了我们的新用户。
+### 具体调试
+
+现在就可以运行我们的代码看具体运作过程了！为了便于调试与参数的收发，我们使用[postman](https://www.getpostman.com/)(可在Chrome上或Mac上安装)来操作.
+
+`npm start`运行我们的本地服务器，访问 [localhost:8080/]()
+应该就可以看到我们所返回的初始hellow json值了，然我们继续深入测试。
+
+![](https://haitao.nos.netease.com/942f5170-3e46-4214-9841-dbb60344366f_1030_680.jpg)
+
+POST访问[localhost:8080/api/signup](),我们来注册一个新用户，注意要设置`body`的`Content-Type`为`x-www-form-urlencoded` 以便我们的`body-parser`能够正确解析,好的我们成功模拟创建了我们的新用户。
 
 ![](https://haitao.nos.netease.com/3d7edd98-070f-495f-a7fd-270e9eab7133_1030_680.jpg)
 
