@@ -4,7 +4,6 @@ const morgan = require('morgan'); // 命令行log显示
 const passport = require('passport');// 用户认证模块passport
 const Strategy = require('passport-http-bearer').Strategy;// token验证模块
 
-import mongodb from 'mongodb';
 import mongoose from 'mongoose';
 
 const routes = require('./routes');
@@ -32,27 +31,3 @@ db.on('error', console.error.bind(console, 'connection error:'));
 app.listen(port, () => {
     console.log('listening on port : ' + port);
 })
-
-
-/**
-
- const MongoClient = mongodb.MongoClient;
-
- const dbURL = config.database
-
- // MongoClient.connect(url, callback) to connect to mongodb
- MongoClient.connect(dbURL, {useUnifiedTopology: true, useNewUrlParser: true}, function (err, client) {
-    if (err) {
-        throw err;
-    } else {
-        console.log("已连接!")
-    }
-
-    const db = client.db('authApi');      // 读取或创建 db : crud
-
-    app.listen(port, () => {
-        console.log('listening on port : ' + port);
-    })
-});
-
- */
