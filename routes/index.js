@@ -1,3 +1,6 @@
+// const cors = require('cors');   // 跨域设置
+// const corsOptions = require('../cors'); // white list
+
 module.exports = (app) => {
     app.get('/', (req, res) => {
         res.send('hello index!');

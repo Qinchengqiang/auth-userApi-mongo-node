@@ -1,6 +1,6 @@
 const express = require('express');
 const User = require('../models/user');     // model
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');        // jwt
 const config = require('../config');
 const passport = require('passport');       // 用于验证
 

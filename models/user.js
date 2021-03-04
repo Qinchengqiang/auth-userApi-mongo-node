@@ -31,7 +31,7 @@ UserSchema.pre('save', function (next) {
                 if (err) {
                     return next(err);
                 }
-                user.password = hash;   // 更改password
+                user.password = hash;   // 更改 password 为加密后的密码
                 next(); // 上一个中间件调用 next 函数的时候，下一个执行
             });
         });
